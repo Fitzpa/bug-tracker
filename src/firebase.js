@@ -2,14 +2,16 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 
 const firebaseConfig = firebase.initializeApp({
-  apiKey: process.env.REACT_APP_API_KEY,
-  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-  databaseURL: process.env.REACT_APP_DATABASE_UR,
-  projectId: process.env.REACT_APP_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_APP_ID,
-  measurementId: process.env.REACT_APP_MEASUREMENT_ID,
+  apiKey: 'AIzaSyAZY-jN853SgJgHBAnSemsCjuqy3RNgQ0w',
+  authDomain: 'louies-bug-tracker.firebaseapp.com',
+  databaseURL: 'https://louies-bug-tracker.firebaseio.com',
+  projectId: 'louies-bug-tracker',
+  storageBucket: 'louies-bug-tracker.appspot.com',
+  messagingSenderId: '157659007859',
+  appId: '1:157659007859:web:4aa8c3c127cb7c81951306',
+  measurementId: 'G-WKMYDF21D4',
 });
 
 export { firebaseConfig as firebase };
+
+// TODO Set up users authentication in firebase

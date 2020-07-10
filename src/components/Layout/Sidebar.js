@@ -6,26 +6,26 @@ export const Sidebar = () => {
       <ul className="sidebar__generic">
         <li>
           <span>
-            <i class="fal fa-inbox"></i>
+            <i className="fal fa-inbox"></i>
           </span>
           <span>Inbox</span>
         </li>
         <li>
           <span>
-            <i class="fal fa-calendar-plus"></i>
+            <i className="fal fa-calendar-plus"></i>
           </span>
           <span>Today</span>
         </li>
         <li>
           <span>
-            <i class="fal fa-calendar-alt"></i>
+            <i className="fal fa-calendar-alt"></i>
           </span>
           <span>Next 7 Days</span>
         </li>
       </ul>
       <div className="sidebar__middle">
         <span>
-          <i class="fal fa-chevron-down"></i>
+          <i className="fal fa-chevron-down"></i>
         </span>
         <h2>Projects</h2>
       </div>
