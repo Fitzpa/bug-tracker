@@ -20,7 +20,7 @@ export const Sidebar = () => {
           }}
         >
           <span>
-            <i className="fal fa-inbox"></i>
+            <i className="fas fa-inbox"></i>
           </span>
           <span>Inbox</span>
         </li>
@@ -33,7 +33,7 @@ export const Sidebar = () => {
           }}
         >
           <span>
-            <i className="fal fa-calendar-plus"></i>
+            <i className="fas fa-calendar-plus"></i>
           </span>
           <span>Today</span>
         </li>
@@ -46,7 +46,7 @@ export const Sidebar = () => {
           }}
         >
           <span>
-            <i className="fal fa-calendar-alt"></i>
+            <i className="fas fa-calendar-alt"></i>
           </span>
           <span>Next 7 Days</span>
         </li>
@@ -58,7 +58,7 @@ export const Sidebar = () => {
         <span>
           <i
             className={
-              !showProjects ? 'hidden-projects' : 'fal fa-chevron-down'
+              !showProjects ? 'hidden-projects' : 'fas fa-chevron-down'
             }
           ></i>
         </span>

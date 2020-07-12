@@ -166,7 +166,7 @@ header {
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    max-width: 922px;
+    max-width: 1400px;
     margin: auto;
     height: 44px;
 
@@ -513,6 +513,7 @@ header {
   ============================================ */
 .tasks {
   width: 100%;
+  max-width: 1144px;
   background-color: $light;
   margin-left: 266px;
   border-right: $generic-border;

@@ -35,7 +35,7 @@ export const SingleProject = ({ project }) => {
         role="button"
         aria-label="Cancel adding project, do not delete"
       >
-        <i className="fal fa-trash"></i>
+        <i className="fas fa-trash"></i>
         {showConfirm && (
           <div className="project-delete-modal">
             <div className="project-delete-modal__inner">
