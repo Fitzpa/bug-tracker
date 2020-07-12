@@ -39,6 +39,7 @@ export const AddProject = ({ shouldShow = false }) => {
             data-testid="project-name"
             placeholder="Name your project"
           />
+          <img src="#" alt="" />
           <button
             className="add-project__submit"
             type="button"

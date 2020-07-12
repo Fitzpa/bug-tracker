@@ -611,6 +611,10 @@ header {
       -webkit-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
 
+      i {
+        color: $dark;
+      }
+
       .header {
         font-size: 13px;
         margin-bottom: 20px;

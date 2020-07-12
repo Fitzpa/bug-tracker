@@ -6,7 +6,7 @@
   "scripts": {
     "clear-build-cache": "rm -rf .cache/ dist/",
     "format": "prettier \"src/**/*.{js,html}\" --write",
-    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
+    "lint": "eslint \"**/*.js\"",
     "dev": "parcel public/index.html",
     "test": "jest",
     "test:update": "jest -u",

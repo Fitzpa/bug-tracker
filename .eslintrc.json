@@ -70,6 +70,7 @@
     "react/jsx-props-no-spreading": 0,
     "react/no-unescaped-entities": 0,
     "jsx-a11y/accessible-emoji": 0,
+    "jsx-a11y/rule-name": 2,
     "react/require-default-props": 0,
     "react/jsx-filename-extension": [
       1,
@@ -98,8 +99,7 @@
       {
         "trailingComma": "es5",
         "singleQuote": true,
-        "printWidth": 80,
-        "endOfLine": "auto"
+        "printWidth": 80
       }
     ],
     "jsx-a11y/href-no-hash": "off",
@@ -110,5 +110,5 @@
       }
     ]
   },
-  "plugins": ["prettier", "react", "react-hooks"]
+  "plugins": ["prettier", "react", "react-hooks", "jsx-a11y"]
 }
