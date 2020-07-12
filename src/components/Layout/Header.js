@@ -5,17 +5,20 @@ export const Header = () => {
     <header className="header" data-testid="header">
       <nav>
         <div className="logo">
-          <i className="fal fa-bug fa-3x"></i>
-          <i className="fal fa-search fa-3x"></i>
+          <i className="fal fa-bug"></i>
+          <i className="fal fa-search"></i>
+          <span>Bug Tracker</span>
         </div>
         <div className="settings">
           <ul>
-            <li>
-              <i className="fal fa-plus fa-3x"></i>
+            <li className="settings__add" data-testid="add-task-action">
+              <i className="fal fa-plus"></i>
             </li>
-            <li>
-              <i className="fal fa-sun fa-3x"></i>
-              <i className="fal fa-moon fa-3x"></i>
+            <li className="settings__lightmode" data-testid="lightmode-action">
+              <i className="fal fa-sun"></i>
+            </li>
+            <li className="settings__darkmode" data-testid="darkmode-action">
+              <i className="fal fa-moon"></i>
             </li>
           </ul>
         </div>

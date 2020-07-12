@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import moment from 'moment';
-import { firebase } from '../../firebase';
-import { collatedTasksExist } from '../utils/helpers';
+import { firebase } from '../firebase';
+import { collatedTasksExist } from '../helpers';
 
 export const useTasks = (selectedProject) => {
   const [tasks, setTasks] = useState([]);
@@ -62,7 +62,7 @@ export const useProjects = () => {
       .orderBy('projectId')
       .get()
       .then((snapshot) => {
-        const allProjects = snapshot.docs.map((projects) => ({
+        const allProjects = snapshot.docs.map((project) => ({
           ...project.data(),
           docId: project.id,
         }));
