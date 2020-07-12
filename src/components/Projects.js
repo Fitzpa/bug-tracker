@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useSelectedProjectValue, useProjectsValue } from '../../context';
+import { useSelectedProjectValue, useProjectsValue } from '../context';
 import { SingleProject } from './SingleProject';
 
 export const Projects = ({ activeValue = null }) => {

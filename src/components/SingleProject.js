@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { useProjectsValue, useSelectedProjectValue } from '../../context';
-import { firebase } from '../../firebase';
+import { useProjectsValue, useSelectedProjectValue } from '../context';
+import { firebase } from '../firebase';
 
 export const SingleProject = ({ project }) => {
   const { projects, setProjects } = useProjectsValue();
