@@ -181,7 +181,14 @@ header {
         grid-area: 1/1;
 
         i {
-          font-size: 1.75rem;
+          font-size: 25px;
+          padding-right: 6px;
+          margin-top: 6px;
+        }
+        span {
+          @include mq('768px') {
+            display: none;
+          }
         }
       }
 
@@ -215,13 +222,12 @@ header {
             }
 
             &.settings__add {
-              margin-right: 15px;
-              font-size: 30px;
+              margin-right: 10px;
+              font-size: 20px;
             }
 
             &.settings__dark-mode i {
-              width: 20px;
-              height: 20px;
+              font-size: 20px;
             }
           }
         }

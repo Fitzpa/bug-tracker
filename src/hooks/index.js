@@ -20,7 +20,7 @@ export const useTasks = (selectedProject) => {
         ? (unsubscribe = unsubscribe.where(
             'date',
             '==',
-            moment().format('MM/DD/YYYY')
+            moment().format('DD/MM/YYYY')
           ))
         : selectedProject === 'INBOX' || selectedProject === 0
         ? (unsubscribe = unsubscribe.where('date', '==', ''))
@@ -32,15 +32,29 @@ export const useTasks = (selectedProject) => {
         ...task.data(),
       }));
 
-      setTasks(
-        selectedProject === 'NEXT_7'
-          ? newTasks.filter(
-              (task) =>
-                moment(task.date, 'DD-MM-YYYY').diff(moment(), 'days') <= 7 &&
-                task.archived !== true
-            )
-          : newTasks.filter((task) => task.archived !== true)
-      );
+      if (selectedProject === 'NEXT_7') {
+        newTasks.filter(
+          (task) =>
+            moment(task.date, 'MM-DD-YYYY').diff(moment(), 'days') <= 7 &&
+            task.archived !== true
+        );
+      } else if ('TOMORROW') {
+        newTasks.filter(
+          (task) =>
+            moment(task.date, 'MM-DD-YYYY').diff(moment(), 'days') === 1 &&
+            task.archived !== true
+        );
+      } else if ('TODAY') {
+        newTasks.filter(
+          (task) =>
+            moment(task.date, 'MM-DD-YYYY').diff(moment(), 'days') === 0 &&
+            task.archived !== true
+        );
+      } else {
+        newTasks.filter((task) => task.archived !== true);
+      }
+
+      setTasks(newTasks);
       setArchivedTasks(newTasks.filter((task) => task.archived !== false));
     });
 
@@ -67,7 +81,6 @@ export const useProjects = () => {
           docId: project.id,
         }));
 
-        // this prevents an infinite loop from happening
         if (JSON.stringify(allProjects) !== JSON.stringify(projects)) {
           setProjects(allProjects);
         }

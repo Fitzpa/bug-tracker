@@ -23,7 +23,7 @@ export const AddTask = ({
   const addTask = () => {
     const projectId = project || selectedProject;
     let collatedDate = '';
-
+    console.log('projectId : ', projectId);
     if (projectId === 'TODAY') {
       collatedDate = moment().format('MM/DD/YYYY');
     } else if (projectId === 'NEXT_7') {
@@ -38,7 +38,7 @@ export const AddTask = ({
         .collection('Tasks')
         .add({
           archived: false,
-          data: collatedDate || taskDate,
+          date: collatedDate || taskDate,
           projectId,
           task,
           userId: 'asldkjh2938407oasdf',
@@ -60,7 +60,15 @@ export const AddTask = ({
         <div
           className="add-task__shallow"
           data-testid="show-main-action"
-          onClick={() => setShowMain(!showMain)}
+          onClick={() => {
+            console.log(project);
+            setShowMain(!showMain);
+          }}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') setShowMain(!showMain);
+          }}
+          aria-label="Add task"
+          role="button"
         >
           <span className="add-task__plus">+</span>
           <span className="add-task__text">Add Task</span>
@@ -93,6 +101,7 @@ export const AddTask = ({
             setShowProjectOverlay={setShowProjectOverlay}
           />
           <TaskDate
+            setProject={setProject}
             setTaskDate={setTaskDate}
             showTaskDate={showTaskDate}
             setShowTaskDate={setShowTaskDate}
