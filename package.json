@@ -1,17 +1,37 @@
 {
-  "name": "bug-tracker-app",
+  "name": "jira-like",
   "version": "0.1.0",
   "private": true,
-  "license": "MIT",
+  "dependencies": {
+    "firebase": "^7.15.2",
+    "moment": "^2.27.0",
+    "node-sass": "^4.14.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^10.3.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jsx-a11y": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.4",
+    "prettier": "^2.0.5"
+  },
   "scripts": {
-    "clear-build-cache": "rm -rf .cache/ dist/",
-    "format": "prettier \"src/**/*.{js,html}\" --write",
-    "lint": "eslint \"**/*.js\"",
-    "dev": "parcel public/index.html",
-    "test": "jest",
-    "test:update": "jest -u",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
   },
   "browserslist": {
     "production": [
@@ -24,44 +44,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "dependencies": {
-    "firebase": "^7.15.2",
-    "moment": "^2.27.0",
-    "node-sass": "^4.14.1",
-    "prop-types": "^15.7.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
-  },
-  "devDependencies": {
-    "@testing-library/react": "^10.3.0",
-    "@babel/core": "^7.10.3",
-    "@babel/preset-env": "^7.10.3",
-    "@babel/preset-react": "^7.10.1",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.2.0",
-    "eslint-config-airbnb": "^18.2.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-import": "^2.21.2",
-    "eslint-plugin-jsx-a11y": "^6.3.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.20.0",
-    "eslint-plugin-react-hooks": "^4.0.4",
-    "parcel-bundler": "^1.12.4",
-    "prettier": "^2.0.5"
-  },
-  "description": "",
-  "main": "jest.config.js",
-  "directories": {
-    "test": "test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Fitzpa/bug-tracker.git"
-  },
-  "author": "",
-  "bugs": {
-    "url": "https://github.com/Fitzpa/bug-tracker/issues"
-  },
-  "homepage": "https://github.com/Fitzpa/bug-tracker#readme"
+  }
 }
