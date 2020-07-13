@@ -140,6 +140,42 @@ $generic-border: 1px solid $alt;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);
     background-color: $dark;
     border-color: transparent;
+    .logo {
+      span {
+        color: darken($dark, 20%);
+      }
+    }
+    i {
+      color: darken($dark, 20%);
+    }
+    nav {
+      div.settings {
+        ul {
+          li:hover {
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.5);
+          }
+        }
+      }
+    }
+  }
+  .sidebar {
+    background-color: darken($dark, 30%);
+    .add-project {
+      &__text {
+        color: $light;
+      }
+    }
+  }
+  .tasks {
+    background-color: darken($dark, 20%);
+    color: $light;
+    li {
+      color: $light;
+    }
+    .add-task__text {
+      color: $light;
+    }
   }
 }
 
